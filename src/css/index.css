@@ -76,7 +76,6 @@ h2 {
 #main-hero #hero-left #hero-title {
   margin: auto;
   max-width: 500px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 #main-hero #hero-left #hero-title #description-tags {
@@ -100,8 +99,7 @@ h2 {
 }
 #main-hero #hero-right img {
   height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 #main-hero #hero-right #photo-credit {
@@ -290,10 +288,8 @@ h2 {
 .card .card-front .card-content img {
   height: 100%;
   width: 100%;
-  -o-object-position: left top;
-     object-position: left top;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-position: left top;
+  object-fit: cover;
 }
 .card {
   /* Style the back side */
@@ -344,4 +340,4 @@ h2 {
     width: auto;
     padding: 20px;
   }
-}
+}/*# sourceMappingURL=index.css.map */
