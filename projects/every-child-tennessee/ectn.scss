@@ -1,0 +1,11 @@
+@import '../../src/scss/scss';
+
+.project-header {
+    background-color: $paleGrey;
+    width: 100%;
+
+    &--title {
+        background-color: $softBlue;
+        width: auto;
+    }
+}
