@@ -1,0 +1,47 @@
+@use '../../src/scss/scss' as *;
+
+.btn {
+    $color-accent__primary-dark: #000000;
+    $color-primary__neutral-light: #FFFFFF;
+
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    min-width: 100px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+
+    // Green button, white text
+    &--primary {
+      background-color: $color-accent__primary-dark;
+      color: $color-primary__neutral-light;
+      &:hover {
+        background-color: $color-primary__neutral-light;
+        color: $color-accent__primary-dark;
+      }
+    }
+    // White button, green text
+    &--secondary {
+      background-color: $color-primary__neutral-light;
+      color: $color-accent__primary-dark;
+      &:hover {
+        background-color: $color-accent__primary-dark;
+        color: $color-primary__neutral-light;
+      }
+    }
+
+    &--rounded {
+      border-radius: 8px;
+      padding: 16px 30px;
+    }
+    &--square {
+      border-radius: 0px;
+      padding: 16px 32px;
+    }
+
+    &--caps {
+      text-transform: uppercase;
+    }
+  }
+  

@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", async () => {
 
     // load in the project cards
-try {
-    const response = await fetch('./portfolio-projects.json');
-    const data = await response.json();
+    try {
+        const response = await fetch('./src/js/portfolio-projects.json');
+        const data = await response.json();
 
-    const projectCards = document.getElementById("project-cards");
+        const projectCards = document.getElementById("project-cards");
 
-    if (data && projectCards) {
-        data.projects.forEach(project => {
-            addProjectCard(project, projectCards);
-        });
-    }
+        if (data && projectCards) {
+            data.projects.forEach(project => {
+                addProjectCard(project, projectCards);
+            });
+        }
     } catch (err) {
-    console.error("Failed to load projects:", err);
+        console.error("Failed to load projects:", err);
     }
 });
 

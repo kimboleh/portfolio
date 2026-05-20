@@ -1,0 +1,80 @@
+@use '../../src/scss/scss' as *;
+
+.header-nav {
+    position: fixed;
+	top: 0;
+	left: 0;
+    box-sizing: border-box;
+	width: 100vw;
+	z-index: 2;
+    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+
+    background: linear-gradient(180deg,rgba(48, 37, 29, 1) 0%, rgba(48, 37, 29, 0.6) 61%, rgba(48, 37, 29, 0) 100%);
+    padding: 1em;
+
+    //height: $size__site-bottom-nav-height;
+
+    .header-nav--site-branding {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .site-title {
+            display: block;
+            margin-left: 15px;
+            font-size: 22px;
+            letter-spacing: 2.16px;
+            font-weight: 700;
+        }
+    }
+
+    .header-nav--links {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        
+        .header-nav--menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+
+            >li.menu-link {
+                padding: 0;
+                margin: 0;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                >a {
+                    color: inherit;
+                    white-space: nowrap;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 7px 17px;
+
+                    &:focus {
+                        position: relative;
+                        z-index: 99999; // Ensure focus styles appear above absolute positioned elements
+                        outline-offset: 0;
+                        text-decoration-thickness: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// TODO: breakpoint at 1200px
+@media (max-width: 1200px) {}
