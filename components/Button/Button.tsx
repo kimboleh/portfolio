@@ -1,5 +1,4 @@
 import React from 'react';
-import { LocalizedLink } from '../LocalizedLink';
 import './button.scss';
 
 /** Typing for props */
@@ -38,9 +37,9 @@ export const Button: React.FC<ButtonProps> = ({
 
   // Return as a link if 'link' prop is provided, otherwise as a button
   return link ? (
-    <LocalizedLink to={link} className={className} style={style} onClick={onClick} {...props}>
+    <a href={link} className={className} style={style} onClick={onClick} {...props}>
       {label}
-    </LocalizedLink>
+    </a>
   ) : (
     <button type="button" className={className} style={style} onClick={onClick} {...props}>
       {label}

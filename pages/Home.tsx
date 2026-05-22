@@ -1,16 +1,13 @@
-import { useTranslation } from "react-i18next";
-
 import { Button } from '../components/Button/Button';
 import { HeaderNav } from '../components/HeaderNav/HeaderNav';
 
 export default function Home() {
-    const { t } = useTranslation();
     return (
         <div>
             <HeaderNav
                 logo='../src/img/favicon.ico'
                 siteTitle={''}
-                button={<Button primary rounded={false} link={`/connect`} label={t('Contact Me')} />}
+                button={<Button primary rounded={false} link={`/connect`} label='Contact Me' />}
             />
             { /* TOP HERO */ }
             <section id="main-hero" aria-label="introduction">

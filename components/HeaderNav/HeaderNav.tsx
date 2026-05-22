@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 import menus from '../../pages/menus.json';
-import { useTranslation } from 'react-i18next';
-import { LocalizedLink } from '../LocalizedLink';
 import { MenuItem } from '../../src/types';
 
-// import LanguageToggle from '../LanguageToggle';
 import './HeaderNav.scss';
 
 /* Define/type props */
@@ -23,7 +20,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
   button = undefined,
   ...props
 }) => {
-  const { t } = useTranslation();
   const className = ['header-nav'].join(' ');
 
   console.log('HeaderNav links:', links);
@@ -32,18 +28,18 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
     <div className={className} {...props}>
           <div className="header-nav--site-branding">
             {/* If logo is provided, display it; otherwise, just show the title */}
-            <LocalizedLink to="/">
+            <a href="/">
               <img className="site-logo" src={logo} />
-            </LocalizedLink>
+            </a>
             <h1 className='site-title'>{siteTitle}</h1>
           </div>
           <div className="header-nav--links">
             <ul className='header-nav--menu'>
               {links.map(link => (
                 <li className='menu-link font__nav-accordion--header' key={link.url}>
-                  <LocalizedLink to={link.url}>
-                    {t(link.title)}
-                  </LocalizedLink>
+                  <a href={link.url}>
+                    {link.title}
+                  </a>
                 </li>
               ))}
               </ul>

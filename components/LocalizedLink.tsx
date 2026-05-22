@@ -1,6 +1,11 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
+/**
+ * Interface for localizing links for site translation.
+ * Currently not in use, but keeping this file around in case
+ * I ever translate this site to Spanish!
+ */
 interface LocalizedLinkProps {
     to: string;
     children: React.ReactNode;
