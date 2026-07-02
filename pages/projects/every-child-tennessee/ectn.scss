@@ -1,4 +1,4 @@
-@import '../../src/scss/scss';
+@use '../../src/scss/scss' as *;
 
 .project-header {
     background-color: $paleGrey;

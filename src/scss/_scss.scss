@@ -1,4 +1,4 @@
-@import 'index';
-@import 'navigation';
-@import 'variables';
-@import '../../public/assets/fonts/fonts';
+@use 'index' as *;
+@use 'navigation' as *;
+@use 'variables' as *;
+@use '../../public/assets/fonts/fonts' as *;
